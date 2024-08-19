@@ -29,6 +29,9 @@ namespace Data.EntityFramework.Configurations
             builder.Property(t => t.UpdatedAt);
 
             builder.Property(t => t.Active);
+
+            builder.HasIndex(c => c.Email)
+                .IsUnique();
         }
     }
 }
