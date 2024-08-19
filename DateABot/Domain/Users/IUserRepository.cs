@@ -2,6 +2,6 @@
 {
     public interface IUserRepository
     {
-        Task<User> GetById(Guid Id, CancellationToken cancellationToken = default);
+        Task<User?> GetById(Guid Id, CancellationToken cancellationToken = default);
     }
 }

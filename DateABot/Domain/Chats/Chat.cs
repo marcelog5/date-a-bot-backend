@@ -1,4 +1,6 @@
 ﻿using Domain.Abstracts;
+using Domain.Bots;
+using Domain.Users;
 
 namespace Domain.Chats
 {
@@ -23,5 +25,7 @@ namespace Domain.Chats
 
         public Guid UserId { get; private set; }
         public Guid BotId { get; private set; }
+        public User User { get; private set; }
+        public Bot Bot { get; private set; }
     }
 }

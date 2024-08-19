@@ -2,6 +2,6 @@
 {
     public interface IBotRepository
     {
-        Task<Bot> GetById(Guid Id, CancellationToken cancellationToken = default);
+        Task<Bot?> GetById(Guid Id, CancellationToken cancellationToken = default);
     }
 }
