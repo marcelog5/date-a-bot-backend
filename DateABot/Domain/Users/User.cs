@@ -11,6 +11,11 @@ namespace Domain.Users
             string password)
             : base()
         {
+            if (password == null)
+            {
+                throw new Exception("Password cannot be null");
+            }
+
             Name = name;
             Email = email;
             Password = password;
