@@ -10,17 +10,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens
 		..\.gitignore = ..\.gitignore
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{F72BCD86-8A53-4AF5-A47E-044DA85BA15B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test", "Test\Test.csproj", "{F72BCD86-8A53-4AF5-A47E-044DA85BA15B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{4F478131-1ED5-4990-8E89-4CFD31CDA3A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{4F478131-1ED5-4990-8E89-4CFD31CDA3A1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PrimaryAdapters", "PrimaryAdapters", "{F2255195-6822-4087-8D21-6058E9431317}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SecondaryAdapters", "SecondaryAdapters", "{157E1103-1A3E-48C8-8171-93D8AD535D00}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "Api\Api.csproj", "{02486E44-3D3D-4865-9734-86157DC53EF1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "Api\Api.csproj", "{02486E44-3D3D-4865-9734-86157DC53EF1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data.EntityFramework", "Data.EntityFramework\Data.EntityFramework.csproj", "{11F099BE-A652-4EB5-ADE2-CBDBE3A64801}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data.EntityFramework", "Data.EntityFramework\Data.EntityFramework.csproj", "{11F099BE-A652-4EB5-ADE2-CBDBE3A64801}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bot.Http", "Bot.Http\Bot.Http.csproj", "{86B2DC23-70F1-42AB-93C0-B2093C6BDB11}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -48,6 +50,10 @@ Global
 		{11F099BE-A652-4EB5-ADE2-CBDBE3A64801}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11F099BE-A652-4EB5-ADE2-CBDBE3A64801}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11F099BE-A652-4EB5-ADE2-CBDBE3A64801}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86B2DC23-70F1-42AB-93C0-B2093C6BDB11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86B2DC23-70F1-42AB-93C0-B2093C6BDB11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86B2DC23-70F1-42AB-93C0-B2093C6BDB11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86B2DC23-70F1-42AB-93C0-B2093C6BDB11}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,6 +61,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{02486E44-3D3D-4865-9734-86157DC53EF1} = {F2255195-6822-4087-8D21-6058E9431317}
 		{11F099BE-A652-4EB5-ADE2-CBDBE3A64801} = {157E1103-1A3E-48C8-8171-93D8AD535D00}
+		{86B2DC23-70F1-42AB-93C0-B2093C6BDB11} = {157E1103-1A3E-48C8-8171-93D8AD535D00}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {148D2935-C869-405F-9EFF-9DE39CB662B6}

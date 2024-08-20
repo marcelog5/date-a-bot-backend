@@ -2,6 +2,7 @@ using Api.Extensions;
 using Data.EntityFramework;
 using Application;
 using Api.Hubs;
+using Bot.Http;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,6 +26,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDataEfCore(builder.Configuration);
+builder.Services.AddBotConnection();
 builder.Services.AddApplication();
 
 var app = builder.Build();
