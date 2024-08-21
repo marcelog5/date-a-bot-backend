@@ -1,4 +1,6 @@
-﻿using Domain.Users;
+﻿using Domain.Shared;
+using Domain.Users;
+using Microsoft.EntityFrameworkCore;
 
 namespace Data.EntityFramework.Repositories
 {
@@ -6,6 +8,13 @@ namespace Data.EntityFramework.Repositories
     {
         public UserRepository(ApplicationDbContext dbContext) : base(dbContext)
         {
+        }
+
+        public async Task<bool> AlreadyExists(Email email, CancellationToken cancellationToken = default)
+        {
+            return await DbContext
+                .Set<User>()
+                .AnyAsync(user => user.Email == email, cancellationToken);
         }
     }
 }

@@ -24,7 +24,9 @@ namespace Application.UseCases.ChatUseCases
             _unitOfWork = unitOfWork;
         }
 
-        public async Task<Result<CreateChatOutput>> Execute(CreateChatInput input, CancellationToken cancellationToken = default)
+        public async Task<Result<CreateChatOutput>> Execute(
+            CreateChatInput input, 
+            CancellationToken cancellationToken = default)
         {
             Bot bot = await _botRepository.GetById(input.BotId, cancellationToken);
 
