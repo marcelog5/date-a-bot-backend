@@ -18,13 +18,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Application\Application.csproj" />
     <ProjectReference Include="..\Bot.Http\Bot.Http.csproj" />
     <ProjectReference Include="..\Data.EntityFramework\Data.EntityFramework.csproj" />
+    <ProjectReference Include="..\Security.PasswordHashing\Security.PasswordHashing.csproj" />
   </ItemGroup>
 
 </Project>

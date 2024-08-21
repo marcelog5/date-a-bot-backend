@@ -3,6 +3,7 @@ using Data.EntityFramework;
 using Application;
 using Api.Hubs;
 using Bot.Http;
+using Security.PasswordHashing;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,6 +28,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDataEfCore(builder.Configuration);
 builder.Services.AddBotConnection();
+builder.Services.AddHashing();
 builder.Services.AddApplication();
 
 var app = builder.Build();

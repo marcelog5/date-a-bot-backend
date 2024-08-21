@@ -22,7 +22,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "Api\Api.csproj", "{0
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data.EntityFramework", "Data.EntityFramework\Data.EntityFramework.csproj", "{11F099BE-A652-4EB5-ADE2-CBDBE3A64801}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bot.Http", "Bot.Http\Bot.Http.csproj", "{86B2DC23-70F1-42AB-93C0-B2093C6BDB11}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bot.Http", "Bot.Http\Bot.Http.csproj", "{86B2DC23-70F1-42AB-93C0-B2093C6BDB11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Security.PasswordHashing", "Security.PasswordHashing\Security.PasswordHashing.csproj", "{8B6C1561-BD75-40A2-8248-57F470FDBDB0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -54,6 +56,10 @@ Global
 		{86B2DC23-70F1-42AB-93C0-B2093C6BDB11}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86B2DC23-70F1-42AB-93C0-B2093C6BDB11}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86B2DC23-70F1-42AB-93C0-B2093C6BDB11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B6C1561-BD75-40A2-8248-57F470FDBDB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B6C1561-BD75-40A2-8248-57F470FDBDB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B6C1561-BD75-40A2-8248-57F470FDBDB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B6C1561-BD75-40A2-8248-57F470FDBDB0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +68,7 @@ Global
 		{02486E44-3D3D-4865-9734-86157DC53EF1} = {F2255195-6822-4087-8D21-6058E9431317}
 		{11F099BE-A652-4EB5-ADE2-CBDBE3A64801} = {157E1103-1A3E-48C8-8171-93D8AD535D00}
 		{86B2DC23-70F1-42AB-93C0-B2093C6BDB11} = {157E1103-1A3E-48C8-8171-93D8AD535D00}
+		{8B6C1561-BD75-40A2-8248-57F470FDBDB0} = {157E1103-1A3E-48C8-8171-93D8AD535D00}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {148D2935-C869-405F-9EFF-9DE39CB662B6}

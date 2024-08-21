@@ -1,5 +1,4 @@
-﻿
-using Domain.Abstracts;
+﻿using Domain.Abstracts;
 using Domain.Users;
 
 namespace Application.UseCases.UserUseCases
@@ -8,19 +7,22 @@ namespace Application.UseCases.UserUseCases
     {
         private readonly IUserRepository _userRepository;
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IPasswordHasher _passwordHasher;
 
         public CreateUserUseCase
         (
             IUserRepository userRepository,
-            IUnitOfWork unitOfWork
+            IUnitOfWork unitOfWork,
+            IPasswordHasher passwordHasher
         )
         {
             _userRepository = userRepository;
             _unitOfWork = unitOfWork;
+            _passwordHasher = passwordHasher;
         }
 
         public async Task<Result<CreateUserOutput>> Execute(
-            CreateUserInput input, 
+            CreateUserInput input,
             CancellationToken cancellationToken = default)
         {
             bool userExists = await _userRepository.AlreadyExists(input.Email, cancellationToken);
@@ -30,11 +32,14 @@ namespace Application.UseCases.UserUseCases
                 return Result.Failure<CreateUserOutput>(UserErrors.AlreadyExists);
             }
 
+            // Hash the password
+            string hashedPassword = _passwordHasher.HashPassword(input.Password);
+
             User user = new User
             (
                 input.Name,
                 input.Email,
-                input.Password
+                hashedPassword
             );
 
             await _userRepository.Add(user, cancellationToken);
