@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens de Solução", "{1C8FE5BA-7AE5-4701-B54E-99C11946D286}"
 	ProjectSection(SolutionItems) = preProject
 		..\.gitignore = ..\.gitignore
+		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test", "Test\Test.csproj", "{F72BCD86-8A53-4AF5-A47E-044DA85BA15B}"
@@ -24,7 +25,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data.EntityFramework", "Dat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bot.Http", "Bot.Http\Bot.Http.csproj", "{86B2DC23-70F1-42AB-93C0-B2093C6BDB11}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Security.PasswordHashing", "Security.PasswordHashing\Security.PasswordHashing.csproj", "{8B6C1561-BD75-40A2-8248-57F470FDBDB0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Security.PasswordHashing", "Security.PasswordHashing\Security.PasswordHashing.csproj", "{8B6C1561-BD75-40A2-8248-57F470FDBDB0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
