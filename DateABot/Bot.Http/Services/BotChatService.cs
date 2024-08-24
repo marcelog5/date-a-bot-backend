@@ -11,7 +11,7 @@ namespace Bot.Http.Services
         private readonly HttpClient _httpClient;
 
         // URL do serviço Langflow - pode ser movido para uma configuração externa
-        private const string Url = "http://127.0.0.1:7860/api/v1/run/8c9d131d-303a-43ea-bb70-a1102ba2ded1?stream=false";
+        private const string Url = "http://127.0.0.1:7860/api/v1/run/8c9d131d-303a-43ea-bb70-a1102ba2ded1";
 
         public BotChatService(HttpClient httpClient)
         {
@@ -28,17 +28,68 @@ namespace Bot.Http.Services
                 input_type = "chat",
                 tweaks = new
                 {
-                    ChatInput_o1Yil = new { },
-                    Prompt_6zqWn = new { },
-                    Memory_qXjpa = new { },
-                    CrewAIAgentComponent_dstlF = new { },
-                    SequentialTaskComponent_YAzo4 = new { },
-                    SequentialCrewComponent_yXgJV = new { },
-                    ChatOutput_ftmrf = new { },
-                    OllamaModel_bvaI9 = new { },
-                    TextInput_iuHzk = new { input_value = botChat.Backstory },
-                    TextInput_NvF1W = new { input_value = botChat.Role },
-                    TextInput_9PHp7 = new { input_value = botChat.Goal }
+                    CrewAIAgentComponent_dstlF = new
+                    {
+                        allow_code_execution = false,
+                        allow_delegation = true,
+                        backstory = botChat.Backstory,
+                        goal = botChat.Goal,
+                        kwargs = new { },
+                        memory = true,
+                        role = botChat.Role,
+                        verbose = false
+                    },
+                    SequentialTaskComponent_YAzo4 = new
+                    {
+                        async_execution = true,
+                        expected_output = "Personalized, flirtatious, and engaging messages tailored to the user's preferences, aiming to create a romantic and seductive interaction.",
+                        task_description = ""
+                    },
+                    SequentialCrewComponent_yXgJV = new
+                    {
+                        max_rpm = 2,
+                        memory = false,
+                        share_crew = false,
+                        use_cache = true,
+                        verbose = 0
+                    },
+                    ChatOutput_ftmrf = new
+                    {
+                        data_template = "{text}",
+                        input_value = "",
+                        sender = "Machine",
+                        sender_name = "AI",
+                        session_id = "",
+                        should_store_message = true
+                    },
+                    OllamaModel_IuJSA = new
+                    {
+                        base_url = "http://localhost:11434",
+                        format = "",
+                        input_value = "",
+                        metadata = new { },
+                        mirostat = "Disabled",
+                        mirostat_eta = (object)null,
+                        mirostat_tau = (object)null,
+                        model_name = "reefer/monicamaxlvl:latest",
+                        num_ctx = (object)null,
+                        num_gpu = (object)null,
+                        num_thread = (object)null,
+                        repeat_last_n = (object)null,
+                        repeat_penalty = (object)null,
+                        stop_tokens = "",
+                        stream = false,
+                        system = "",
+                        system_message = "",
+                        tags = "",
+                        temperature = 0.2,
+                        template = "",
+                        tfs_z = (object)null,
+                        timeout = (object)null,
+                        top_k = (object)null,
+                        top_p = (object)null,
+                        verbose = false
+                    }
                 }
             };
 
